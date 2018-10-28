@@ -1,2 +1,55 @@
 ;set _root_.scala.collection.Seq(shellPrompt := { _ => "" },SettingKey[_root_.scala.Option[_root_.sbt.File]]("sbtStructureOutputFile") in _root_.sbt.Global := _root_.scala.Some(_root_.sbt.file("C:/Users/Daniil.Balukin/AppData/Local/Temp/sbt-structure.xml")),SettingKey[_root_.java.lang.String]("sbtStructureOptions") in _root_.sbt.Global := "download, resolveClassifiers");apply -cp "C:/Users/Daniil.Balukin/.IdeaIC2018.1/config/plugins/Scala/launcher/sbt-structure-1.0.jar" org.jetbrains.sbt.CreateTasks;*/*:dumpStructure
 exit
+;set _root_.scala.collection.Seq(shellPrompt := { _ => "" },SettingKey[_root_.scala.Option[_root_.sbt.File]]("sbtStructureOutputFile") in _root_.sbt.Global := _root_.scala.Some(_root_.sbt.file("C:/Users/Daniil.Balukin/AppData/Local/Temp/sbt-structure.xml")),SettingKey[_root_.java.lang.String]("sbtStructureOptions") in _root_.sbt.Global := "download, resolveClassifiers");apply -cp "C:/Users/Daniil.Balukin/.IdeaIC2018.1/config/plugins/Scala/launcher/sbt-structure-1.0.jar" org.jetbrains.sbt.CreateTasks;*/*:dumpStructure
+exit
+show version
+reload
+projects
+part1/run
+~part1/run
+part1/~run
+~part1/run
+part1/compile
+part1/run
+reload
+projects
+reload
+part1/run
+part1/compile
+exit
+part1/compile
+part1/clear
+part1/clean
+clean
+part1/compile
+part1/run
+project part1
+compile
+part1/run
+compile
+part1/run
+part1/compile
+reload
+compile
+part1/run
+compile
+run
+part1/run
+~part1/run
+reload
+run
+part1/run
+ class detected.
+sbt part1 run
+'part1' run
+part1 run
+part1 /run
+part1 ~run
+'
+exit
+projects
+complile
+compile
+part1/run
+run
+exit
