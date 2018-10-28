@@ -4,10 +4,10 @@
 		module="part1_2.12"
 		revision="0.1.1"
 		status="integration"
-		publication="20181028115921"
+		publication="20181028143321"
 	>
 		<description>
-		Part1
+		part1
 		</description>
 	</info>
 	<configurations>
