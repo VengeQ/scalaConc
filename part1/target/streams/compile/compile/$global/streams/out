@@ -1,6 +1,2 @@
-[0m[[0m[31merror[0m] [0m[0mC:\Users\Daniil.Balukin\IdeaProjects\concurrency\part1\src\main\scala\Part1.scala:12:10: type mismatch;[0m
-[0m[[0m[31merror[0m] [0m[0m found   : f.type (with underlying type A)[0m
-[0m[[0m[31merror[0m] [0m[0m required: B[0m
-[0m[[0m[31merror[0m] [0m[0m    f=>g(f)[0m
-[0m[[0m[31merror[0m] [0m[0m         ^[0m
-[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[33mwarn[0m] [0m[0mthere were two feature warnings; re-run with -feature for details[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m

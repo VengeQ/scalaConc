@@ -74,3 +74,8 @@ compile
 run
 part1/run
 exit
+part1/run
+~run
+~part1/run
+~run
+~part1/run
