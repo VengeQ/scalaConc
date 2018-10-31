@@ -3,12 +3,29 @@
   <component name="ChangeListManager">
     <list default="true" id="992f4e91-f197-45c2-acc7-2d8bcf798688" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/concurrency-part1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/concurrency-part1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/concurrency.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/concurrency.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/part1/src/main/scala/Part1.scala" beforeDir="false" afterPath="$PROJECT_DIR$/part1/src/main/scala/Part1.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/part1/target/scala-2.12/classes/com/dvbaluki/concurrency/ch1/Exec1$.class" beforeDir="false" afterPath="$PROJECT_DIR$/part1/target/scala-2.12/classes/com/dvbaluki/concurrency/ch1/Exec1$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part1/target/scala-2.12/classes/com/dvbaluki/concurrency/ch1/Part1$.class" beforeDir="false" afterPath="$PROJECT_DIR$/part1/target/scala-2.12/classes/com/dvbaluki/concurrency/ch1/Part1$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part1/target/scala-2.12/classes/com/dvbaluki/concurrency/ch1/Part1$delayedInit$body.class" beforeDir="false" afterPath="$PROJECT_DIR$/part1/target/scala-2.12/classes/com/dvbaluki/concurrency/ch1/Part1$delayedInit$body.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/part1/target/scala-2.12/part1_2.12-0.1.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/part1/target/scala-2.12/part1_2.12-0.1.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part1/target/scala-2.12/resolution-cache/part1/part1$sources/0.1.1/resolved.xml.properties" beforeDir="false" afterPath="$PROJECT_DIR$/part1/target/scala-2.12/resolution-cache/part1/part1$sources/0.1.1/resolved.xml.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part1/target/scala-2.12/resolution-cache/part1/part1$sources/0.1.1/resolved.xml.xml" beforeDir="false" afterPath="$PROJECT_DIR$/part1/target/scala-2.12/resolution-cache/part1/part1$sources/0.1.1/resolved.xml.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/part1/target/scala-2.12/resolution-cache/part1/part1_2.12/0.1.1/resolved.xml.properties" beforeDir="false" afterPath="$PROJECT_DIR$/part1/target/scala-2.12/resolution-cache/part1/part1_2.12/0.1.1/resolved.xml.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/part1/target/scala-2.12/resolution-cache/part1/part1_2.12/0.1.1/resolved.xml.xml" beforeDir="false" afterPath="$PROJECT_DIR$/part1/target/scala-2.12/resolution-cache/part1/part1_2.12/0.1.1/resolved.xml.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part1/target/scala-2.12/resolution-cache/reports/part1-part1$sources-compile-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/part1/target/scala-2.12/resolution-cache/reports/part1-part1$sources-compile-internal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part1/target/scala-2.12/resolution-cache/reports/part1-part1$sources-compile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/part1/target/scala-2.12/resolution-cache/reports/part1-part1$sources-compile.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part1/target/scala-2.12/resolution-cache/reports/part1-part1$sources-optional.xml" beforeDir="false" afterPath="$PROJECT_DIR$/part1/target/scala-2.12/resolution-cache/reports/part1-part1$sources-optional.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part1/target/scala-2.12/resolution-cache/reports/part1-part1$sources-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/part1/target/scala-2.12/resolution-cache/reports/part1-part1$sources-plugin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part1/target/scala-2.12/resolution-cache/reports/part1-part1$sources-pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/part1/target/scala-2.12/resolution-cache/reports/part1-part1$sources-pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part1/target/scala-2.12/resolution-cache/reports/part1-part1$sources-provided.xml" beforeDir="false" afterPath="$PROJECT_DIR$/part1/target/scala-2.12/resolution-cache/reports/part1-part1$sources-provided.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part1/target/scala-2.12/resolution-cache/reports/part1-part1$sources-runtime-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/part1/target/scala-2.12/resolution-cache/reports/part1-part1$sources-runtime-internal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part1/target/scala-2.12/resolution-cache/reports/part1-part1$sources-runtime.xml" beforeDir="false" afterPath="$PROJECT_DIR$/part1/target/scala-2.12/resolution-cache/reports/part1-part1$sources-runtime.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part1/target/scala-2.12/resolution-cache/reports/part1-part1$sources-scala-tool.xml" beforeDir="false" afterPath="$PROJECT_DIR$/part1/target/scala-2.12/resolution-cache/reports/part1-part1$sources-scala-tool.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part1/target/scala-2.12/resolution-cache/reports/part1-part1$sources-test-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/part1/target/scala-2.12/resolution-cache/reports/part1-part1$sources-test-internal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part1/target/scala-2.12/resolution-cache/reports/part1-part1$sources-test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/part1/target/scala-2.12/resolution-cache/reports/part1-part1$sources-test.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/part1/target/scala-2.12/resolution-cache/reports/part1-part1_2.12-compile-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/part1/target/scala-2.12/resolution-cache/reports/part1-part1_2.12-compile-internal.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/part1/target/scala-2.12/resolution-cache/reports/part1-part1_2.12-compile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/part1/target/scala-2.12/resolution-cache/reports/part1-part1_2.12-compile.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/part1/target/scala-2.12/resolution-cache/reports/part1-part1_2.12-optional.xml" beforeDir="false" afterPath="$PROJECT_DIR$/part1/target/scala-2.12/resolution-cache/reports/part1-part1_2.12-optional.xml" afterDir="false" />
@@ -20,16 +37,17 @@
       <change beforePath="$PROJECT_DIR$/part1/target/scala-2.12/resolution-cache/reports/part1-part1_2.12-scala-tool.xml" beforeDir="false" afterPath="$PROJECT_DIR$/part1/target/scala-2.12/resolution-cache/reports/part1-part1_2.12-scala-tool.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/part1/target/scala-2.12/resolution-cache/reports/part1-part1_2.12-test-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/part1/target/scala-2.12/resolution-cache/reports/part1-part1_2.12-test-internal.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/part1/target/scala-2.12/resolution-cache/reports/part1-part1_2.12-test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/part1/target/scala-2.12/resolution-cache/reports/part1-part1_2.12-test.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part1/target/streams/$global/ivyConfiguration/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/part1/target/streams/$global/ivyConfiguration/$global/streams/out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/part1/target/streams/$global/update/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/part1/target/streams/$global/update/$global/streams/out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/part1/target/streams/$global/update/$global/streams/update_cache_2.12/inputs" beforeDir="false" afterPath="$PROJECT_DIR$/part1/target/streams/$global/update/$global/streams/update_cache_2.12/inputs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/part1/target/streams/$global/update/$global/streams/update_cache_2.12/output" beforeDir="false" afterPath="$PROJECT_DIR$/part1/target/streams/$global/update/$global/streams/update_cache_2.12/output" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part1/target/streams/$global/updateClassifiers/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/part1/target/streams/$global/updateClassifiers/$global/streams/out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/part1/target/streams/compile/compile/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/part1/target/streams/compile/compile/$global/streams/out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/part1/target/streams/compile/compileIncSetup/$global/streams/inc_compile_2.12.zip" beforeDir="false" afterPath="$PROJECT_DIR$/part1/target/streams/compile/compileIncSetup/$global/streams/inc_compile_2.12.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/part1/target/streams/compile/compileIncremental/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/part1/target/streams/compile/compileIncremental/$global/streams/export" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/part1/target/streams/compile/compileIncremental/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/part1/target/streams/compile/compileIncremental/$global/streams/out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/part1/target/streams/compile/dependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/part1/target/streams/compile/dependencyClasspath/$global/streams/export" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/part1/target/streams/compile/exportedProductJars/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/part1/target/streams/compile/exportedProductJars/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/part1/target/streams/compile/exportedProducts/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/part1/target/streams/compile/exportedProducts/$global/streams/export" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/part1/target/streams/compile/externalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/part1/target/streams/compile/externalDependencyClasspath/$global/streams/export" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/part1/target/streams/compile/managedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/part1/target/streams/compile/managedClasspath/$global/streams/export" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/part1/target/streams/compile/packageBin/$global/streams/inputs" beforeDir="false" afterPath="$PROJECT_DIR$/part1/target/streams/compile/packageBin/$global/streams/inputs" afterDir="false" />
@@ -41,21 +59,19 @@
       <change beforePath="$PROJECT_DIR$/part1/target/streams/runtime/fullClasspathAsJars/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/part1/target/streams/runtime/fullClasspathAsJars/$global/streams/export" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/part1/target/streams/runtime/internalDependencyAsJars/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/part1/target/streams/runtime/internalDependencyAsJars/$global/streams/export" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/part1/target/streams/runtime/managedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/part1/target/streams/runtime/managedClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$0fa32d8e75a2651c32df$.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$0fa32d8e75a2651c32df.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$0fa32d8e75a2651c32df.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$194bcc1f911084a7097b$.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$194bcc1f911084a7097b.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$194bcc1f911084a7097b.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$32fddba10577ee58a6b4$.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$32fddba10577ee58a6b4.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$32fddba10577ee58a6b4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$55e4756d0c46a0af5d9e$.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$55e4756d0c46a0af5d9e.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$55e4756d0c46a0af5d9e.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$a7238ed42ff6bc566200$.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$a7238ed42ff6bc566200.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$a7238ed42ff6bc566200.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/default/concurrency-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.properties" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/default/concurrency-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/default/concurrency-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/default/concurrency-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-concurrency-build-compile-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-concurrency-build-compile-internal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-concurrency-build-compile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-concurrency-build-compile.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-concurrency-build-optional.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-concurrency-build-optional.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-concurrency-build-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-concurrency-build-plugin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-concurrency-build-pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-concurrency-build-pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-concurrency-build-provided.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-concurrency-build-provided.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-concurrency-build-runtime-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-concurrency-build-runtime-internal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-concurrency-build-runtime.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-concurrency-build-runtime.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-concurrency-build-scala-tool.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-concurrency-build-scala-tool.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-concurrency-build-test-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-concurrency-build-test-internal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-concurrency-build-test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-concurrency-build-test.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/target/streams/$global/ivyConfiguration/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/$global/ivyConfiguration/$global/streams/out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.12/inputs" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.12/inputs" afterDir="false" />
@@ -69,9 +85,21 @@
       <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/fullClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/fullClasspath/$global/streams/export" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/internalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/internalDependencyClasspath/$global/streams/export" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/.history" beforeDir="false" afterPath="$PROJECT_DIR$/target/.history" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/concurrency_2.12-0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/concurrency_2.12-0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/concurrency/concurrency$sources/0.1/resolved.xml.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/concurrency/concurrency$sources/0.1/resolved.xml.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/concurrency/concurrency$sources/0.1/resolved.xml.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/concurrency/concurrency$sources/0.1/resolved.xml.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/concurrency/concurrency_2.12/0.1/resolved.xml.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/concurrency/concurrency_2.12/0.1/resolved.xml.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/concurrency/concurrency_2.12/0.1/resolved.xml.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/concurrency/concurrency_2.12/0.1/resolved.xml.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/concurrency-concurrency$sources-compile-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/concurrency-concurrency$sources-compile-internal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/concurrency-concurrency$sources-compile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/concurrency-concurrency$sources-compile.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/concurrency-concurrency$sources-optional.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/concurrency-concurrency$sources-optional.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/concurrency-concurrency$sources-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/concurrency-concurrency$sources-plugin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/concurrency-concurrency$sources-pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/concurrency-concurrency$sources-pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/concurrency-concurrency$sources-provided.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/concurrency-concurrency$sources-provided.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/concurrency-concurrency$sources-runtime-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/concurrency-concurrency$sources-runtime-internal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/concurrency-concurrency$sources-runtime.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/concurrency-concurrency$sources-runtime.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/concurrency-concurrency$sources-scala-tool.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/concurrency-concurrency$sources-scala-tool.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/concurrency-concurrency$sources-test-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/concurrency-concurrency$sources-test-internal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/concurrency-concurrency$sources-test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/concurrency-concurrency$sources-test.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/concurrency-concurrency_2.12-compile-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/concurrency-concurrency_2.12-compile-internal.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/concurrency-concurrency_2.12-compile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/concurrency-concurrency_2.12-compile.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/concurrency-concurrency_2.12-optional.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/concurrency-concurrency_2.12-optional.xml" afterDir="false" />
@@ -88,22 +116,10 @@
       <change beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.12/inputs" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.12/inputs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.12/output" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.12/output" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/compileIncSetup/$global/streams/inc_compile_2.12.zip" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/compileIncSetup/$global/streams/inc_compile_2.12.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/dependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/dependencyClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/exportedProductJars/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/exportedProductJars/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/$global/updateClassifiers/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/$global/updateClassifiers/$global/streams/out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/streams/compile/externalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/externalDependencyClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/internalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/internalDependencyClasspath/$global/streams/export" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/streams/compile/managedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/managedClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/packageBin/$global/streams/inputs" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/packageBin/$global/streams/inputs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/packageBin/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/packageBin/$global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/packageBin/$global/streams/output" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/packageBin/$global/streams/output" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/runtime/dependencyClasspathAsJars/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/runtime/dependencyClasspathAsJars/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/runtime/exportedProductJars/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/runtime/exportedProductJars/$global/streams/export" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/streams/runtime/externalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/runtime/externalDependencyClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/runtime/fullClasspathAsJars/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/runtime/fullClasspathAsJars/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/runtime/internalDependencyAsJars/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/runtime/internalDependencyAsJars/$global/streams/export" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/streams/runtime/managedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/runtime/managedClasspath/$global/streams/export" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -117,6 +133,7 @@
     <ignored path="$PROJECT_DIR$/part1/project/project/target/" />
     <ignored path="$PROJECT_DIR$/part1/project/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -149,7 +166,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file leaf-file-name="build.sbt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build.sbt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="221">
@@ -158,38 +175,30 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/part1/build.sbt">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
+      <file leaf-file-name="Part1.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/part1/src/main/scala/Part1.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="65" column="32" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="32" />
+            <state relative-caret-position="202">
+              <caret line="138" column="31" selection-start-line="138" selection-start-column="31" selection-end-line="138" selection-end-column="31" />
               <folding>
-                <element signature="e#99#421#1" />
-                <element signature="e#453#459#1" />
-                <element signature="e#883#1093#1" />
-                <element signature="e#1354#2225#1" />
+                <element signature="e#101#437#1" />
+                <element signature="e#451#846#1" />
+                <element signature="e#860#1137#1" />
+                <element signature="e#1151#1625#1" />
+                <element signature="e#1672#3076#1" />
+                <element signature="e#2596#2761#1" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file leaf-file-name="App.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/App.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="51">
               <caret line="3" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -217,10 +226,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1066" />
+    <option name="x" value="2299" />
+    <option name="y" value="-100" />
+    <option name="width" value="1478" />
+    <option name="height" value="999" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -228,6 +237,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -240,7 +250,6 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -276,27 +285,57 @@
   <component name="RunManager">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <method v="2">
+      <method>
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method v="2">
+      <method>
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+      <method>
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
       <properties />
       <listeners />
-      <method v="2">
+      <method>
         <option name="Make" enabled="true" />
       </method>
     </configuration>
@@ -305,7 +344,7 @@
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" />
       <predefined_log_file id="idea.log" enabled="true" />
-      <method v="2">
+      <method>
         <option name="Make" enabled="true" />
       </method>
     </configuration>
@@ -345,18 +384,18 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="C:/Users/Daniil.Balukin/IdeaProjects/concurrency" value="0" />
-        <entry key="C:\Users\Daniil.Balukin\IdeaProjects\concurrency" value="3081387733745" />
+        <entry key="$PROJECT_DIR$" value="0" />
         <entry key="$PROJECT_DIR$/build.sbt" value="2078060467" />
         <entry key="$PROJECT_DIR$/project/build.properties" value="2125951362" />
+        <entry key="C:\Users\Daniil.Balukin\IdeaProjects\concurrency" value="3081861394458" />
       </map>
     </option>
     <option name="projectSyncType">
       <map>
-        <entry key="C:/Users/Daniil.Balukin/IdeaProjects/concurrency" value="RE_IMPORT" />
-        <entry key="C:\Users\Daniil.Balukin\IdeaProjects\concurrency" value="RE_IMPORT" />
+        <entry key="$PROJECT_DIR$" value="RE_IMPORT" />
         <entry key="$PROJECT_DIR$/../playscala" value="PREVIEW" />
         <entry key="$PROJECT_DIR$/../scalaplay/scalaplay" value="PREVIEW" />
+        <entry key="C:\Users\Daniil.Balukin\IdeaProjects\concurrency" value="RE_IMPORT" />
       </map>
     </option>
   </component>
@@ -374,55 +413,55 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="true" />
+    <frame x="1912" y="-108" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16577825" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info id="Capture Tool" order="6" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32939914" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Build" order="7" weight="0.3295063" />
-      <window_info anchor="bottom" id="SBT Console" order="8" weight="0.3295063" />
-      <window_info anchor="bottom" id="sbt-shell-toolwindow" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.30150214" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="12" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="SBT Console" order="8" weight="0.3295063" />
       <window_info anchor="right" id="sbt" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="LuaJ" order="6" />
-      <window_info anchor="right" id="Maven Projects" order="7" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info id="Image Layers" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Version Control" order="12" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.2832244" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Designer" order="2" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1673774" />
+      <window_info anchor="bottom" id="sbt-shell-toolwindow" order="9" />
+      <window_info anchor="right" id="LuaJ" order="6" />
+      <window_info anchor="bottom" id="Build" order="7" weight="0.3295063" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="4" />
       <window_info anchor="right" id="Theme Preview" order="9" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32939914" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/part1/Part1.scala" />
     <entry file="file://$PROJECT_DIR$/build.sbt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/part1/build.sbt">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/App.scala">
       <provider selected="true" editor-type-id="text-editor">
@@ -431,18 +470,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/part1/src/main/scala/Part1.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1105">
+          <caret line="65" column="3" lean-forward="true" selection-start-line="65" selection-start-column="3" selection-end-line="65" selection-end-column="3" />
+          <folding>
+            <element signature="e#101#437#1" />
+            <element signature="e#451#846#1" />
+            <element signature="e#860#1137#1" />
+            <element signature="e#1151#1625#1" />
+            <element signature="e#1672#3076#1" />
+            <element signature="e#2596#2761#1" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/part1/Part1.scala" />
+    <entry file="file://$PROJECT_DIR$/build.sbt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/App.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/part1/src/main/scala/Part1.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="65" column="32" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="32" />
+        <state relative-caret-position="202">
+          <caret line="138" column="31" selection-start-line="138" selection-start-column="31" selection-end-line="138" selection-end-column="31" />
           <folding>
-            <element signature="e#99#421#1" />
-            <element signature="e#453#459#1" />
-            <element signature="e#883#1093#1" />
-            <element signature="e#1354#2225#1" />
+            <element signature="e#101#437#1" />
+            <element signature="e#451#846#1" />
+            <element signature="e#860#1137#1" />
+            <element signature="e#1151#1625#1" />
+            <element signature="e#1672#3076#1" />
+            <element signature="e#2596#2761#1" />
           </folding>
         </state>
       </provider>

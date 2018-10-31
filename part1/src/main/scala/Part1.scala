@@ -1,9 +1,11 @@
 package com.dvbaluki
 package concurrency.ch1
 
+import scala.annotation.tailrec
+
 object Part1 extends App{
 
-  Exec4.go
+  Exec6.go
 
 }
 
@@ -34,7 +36,6 @@ object Exec2{
   def go={
     println("""With a=Option(2) and b=Option("Hello")""")
     println(fuse(Option(2),Option("Hello")))
-
     println("""With a=Option(2) and b=None""")
     println(fuse(Option(2),None))
   }
@@ -83,30 +84,88 @@ object Exec4{
 }
 
 object Exec5{
-  def permutations(x: String): Seq[String]={
+  def permutations(x: String)(pred:String=>String): Seq[String]={
+
+
+    var a=pred(x.sortWith(_<=_))//start String
+    var result:List[String]=List(a) //resultList
 
     //Naraina algorithm
-    var a=x.sortWith(_<=_) //start String
-    var result:List[String]=List(a)
-    //number of combo
-    val cc=a.foldLeft(1)((res:Int,p:Char)=>(a.indexOf(p)+1)*res)
 
-    for (i <- 1 to cc-1) {
-      var b = a //curr string
-      var curMax = -1
-      var lMax = -1
-      //find rightMax j where a(j)<a(j+1)
-      for (j <- 0 until a.length - 1; if (a.charAt(j) < a.charAt(j + 1))) curMax = j
-      // find lMax l where l>j and a(l)>a)j)
-      if (curMax >= 0) for (l <- 0 until a.length; if a.charAt(l) > a.charAt(curMax)) lMax = l
+    //number of combo
+   val b=a
+    while (b!=a.reverse) {
+      // need merge this rec functions
+      @tailrec
+      def findMaxJ(str:String):Int=
+        if (str.length<2) -1 else
+        if (str.charAt(str.length-2)<str.charAt(str.length-1)) str.length-2 else findMaxJ(str.substring(0,str.length-1))
+      @tailrec
+      def findMaxL(str:String,x:Int,startString:String):Int=
+        if (str.length==0) -1 else
+        if (startString(x)<str.charAt(str.length-1)) str.length+x else findMaxL(str.substring(0,str.length-1),x,startString)
+
+      val b = a //curr string
+      val curMax=findMaxJ(b) // find max j where Aj<Aj+1
+      val lMax=findMaxL(b.substring(curMax+1),curMax,b) // find max l where l>j for Al>Aj
+
       //new String 0..a(j) + a(j+1)..n where swap(a(j), a(l))
       if (curMax >= 0 && lMax>0) a = b.substring(0, curMax) + b.charAt(lMax) +(b.substring(curMax + 1, lMax) + b.charAt(curMax) + b.substring(lMax+1, b.length)).reverse
 
-      //add to Seq
-      result=a :: result
+      result=a :: result //add to Seq
+    }
+    result
+
+  }
+
+  def go=println(permutations("hello")((x:String)=>x.toLowerCase))
+}
+
+object Exec6{
+  def combinations(n: Int, xs: Seq[Int]): Iterator[Seq[Int]]= {
+    var a: Set[Seq[Int]] = Set()
+    var counter=0
+    def loop(n: Int, xs: Seq[Int]): Unit = {
+      var i, j = 0
+      if (n == xs.length) {
+        val seq:Seq[Int] = for (i <- 0 to n - 1) yield xs(i)
+        a = a + seq
+      }
+      else {
+        for (j <- xs.indices) {
+          counter+=1
+           j match {
+             case 0 => loop(n, xs.drop(1))
+             case x => loop(n, xs.take(x) ++ xs.drop(x+1))
+           }
+        }
+      }
+
+    }
+    loop(n, xs)
+    a foreach(println)
+    a toIterator
+  }
+
+  def go=combinations(6,(1 to 11).toSeq)
+}
+
+object Exec7 {
+  def matcher(regex: String): PartialFunction[String, List[String]] = {
+    val reg = regex.r
+
+    val result: PartialFunction[String, List[String]] = {
+        case a if ((reg findFirstIn a) match {
+          case Some(x) => true
+          case None => false
+        }) => (for (matchString <- reg findAllMatchIn a) yield matchString toString) toList
     }
     result
   }
 
-  def go=println(permutations("1234"))
+  def go={
+    val a=matcher("h")
+    if (a.isDefinedAt("hoho"))   println(a("hoho"))
+    if (a.isDefinedAt("baba"))   println(a("baba"))
+  }
 }
