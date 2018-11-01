@@ -6,6 +6,8 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/concurrency-build.iml" filepath="$PROJECT_DIR$/.idea/modules/concurrency-build.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/concurrency-part1.iml" filepath="$PROJECT_DIR$/.idea/modules/concurrency-part1.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/part1-build~1.iml" filepath="$PROJECT_DIR$/.idea/modules/part1-build~1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/part2.iml" filepath="$PROJECT_DIR$/.idea/modules/part2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/part2-build.iml" filepath="$PROJECT_DIR$/.idea/modules/part2-build.iml" />
     </modules>
   </component>
 </project>

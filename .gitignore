@@ -1,3 +1,5 @@
 # ignore output compile
 target/
 .part1/
+project/target/
+part[1-9]/target

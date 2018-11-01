@@ -5,7 +5,7 @@ scalaVersion := "2.12.7"
 val scalaTest="org.scalatest" %% "scalatest" % "3.0.5"
 val commons="commons-io" % "commons-io" % "2.4"
 
-fork := false
+fork := true
 
 lazy val part1=Project(
   id = "part1",
@@ -16,11 +16,21 @@ lazy val part1=Project(
     name := "part1"
   )
 
+lazy val part2=Project(
+  id = "part2",
+  base = file("part2")
+).settings(
+  version := "0.1.2",
+  scalaVersion := "2.12.7",
+  name := "part2",
+  fork := true
+)
+
 lazy val concurrency = (project in file("."))
   .settings(
     name := "concurrency",
     libraryDependencies ++= Seq((scalaTest % Test),commons)
-  ).aggregate(part1).dependsOn(part1)
+  ).aggregate(part1,part2).dependsOn(part1,part2)
 
 resolvers ++= Seq(
   "Sonatype OSS Snapshots" at
