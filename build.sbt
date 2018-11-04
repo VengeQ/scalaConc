@@ -5,7 +5,7 @@ scalaVersion := "2.12.7"
 val scalaTest="org.scalatest" %% "scalatest" % "3.0.5"
 val commons="commons-io" % "commons-io" % "2.4"
 
-fork := true
+fork := false
 
 lazy val part1=Project(
   id = "part1",
