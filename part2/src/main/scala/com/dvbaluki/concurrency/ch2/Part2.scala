@@ -2,7 +2,8 @@ package com.dvbaluki
 package concurrency.ch2
 
 
-
+import java.util.{Calendar, Date}
+import concurrency.ch2.DeadLock
 import scala.collection._
 
 package object ch2{
@@ -20,56 +21,53 @@ package object ch2{
 
 import ch2._
 
-//object Part2 extends App{
+object Part2 extends App{
 
-  //DeadLock.go
-//}
 
-object SynchronizedGuardedBlocks extends App {
-  val lock = new AnyRef
-  var message: Option[String] = None
-  val greeter = thread {
-    lock.synchronized {
-      while (message == None) lock.wait()
-      log(message.get)
-    }
-  }
-  lock.synchronized {
-    message = Some("Hello!")
-    lock.notify()
-  }
-  greeter.join()
 }
 
+//parallel calculat
+object Ex1{
+  def parallel[A, B](a: =>A, b: =>B): (A, B) = {
 
-object DeadLock {
+    var t1res: Option[Any] = None
+    var t2res: Option[Any] = None
 
-  class Person(name: String) {
-    def eat(a: Cutlery, b: Cutlery) = a.synchronized {
-      println(s"${this.name} say: ${a.name} is Mine")
-      b.synchronized {
-        println(s"${this.name} say: ${b.name} is Mine")
+    def newThread(body: => Any): Thread = {
+      val t = new Thread {
+        override def run(): Unit =
+          t1res = Some(a)
       }
+      t.start()
+      t.join()
+      t
     }
+    val t1=newThread(a)
+    val t2=newThread(b)
+
+    (a,b)
   }
 
-  //tow cutlery
-  object Cutlery {
-    val fork = new Cutlery("Fork")
-    val knife = new Cutlery("Knife")
+  def go=println(parallel((1 to 60).reduceLeft(_+_),(1 until 6).reduceRight(_-_)))
+}
+
+object Ex2{
+
+  private [this] val counter:Int=10
+
+  def periodically(duration: Long)(b: =>Unit): Unit ={
+    val t=new Thread{
+      override def run(): Unit = {
+        for (c <- 1 to counter){
+          b
+          println(c)
+          Thread.sleep(duration)}
+        }
+    }
+    t.start()
   }
-  class Cutlery(val name: String)
 
+  def go=periodically(1000){
 
-  //two person wanna to eat!
-  def go={
-    val me = new Person("Daniil")
-    val you = new Person("Anna")
-    //val t1 = thread {for (i <- 0 until 10) me.eat(Cutlery.fork, Cutlery.knife)} //-incorrect order of resources. Call deadlock
-    val t1 = thread {for (i <- 0 until 100) me.eat(Cutlery.knife, Cutlery.fork)} //correct order
-    val t2 = thread {for (i <- 0 until 10) you.eat(Cutlery.knife, Cutlery.fork)}
-    t1.join()
-
-    t2.join()
   }
 }
