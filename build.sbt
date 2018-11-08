@@ -4,6 +4,8 @@ scalaVersion := "2.12.7"
 
 val scalaTest="org.scalatest" %% "scalatest" % "3.0.5"
 val commons="commons-io" % "commons-io" % "2.4"
+val scalaLogging="com.typesafe.scala-logging" %% "scala-logging" % "3.9.0"
+val logbackClassic="ch.qos.logback" % "logback-classic" % "1.2.3"
 
 fork := false
 
@@ -23,13 +25,15 @@ lazy val part2=Project(
   version := "0.1.2",
   scalaVersion := "2.12.7",
   name := "part2",
-  fork := true
+  fork := false,
+  libraryDependencies ++= Seq(scalaLogging, logbackClassic),
+  mainClass in assembly := Some("com.dvbaluki.concurrency.ch2.Part2")
 )
 
 lazy val concurrency = (project in file("."))
   .settings(
     name := "concurrency",
-    libraryDependencies ++= Seq((scalaTest % Test),commons)
+    libraryDependencies ++= Seq((scalaTest % Test),commons, scalaLogging, logbackClassic)
   ).aggregate(part1,part2).dependsOn(part1,part2)
 
 resolvers ++= Seq(

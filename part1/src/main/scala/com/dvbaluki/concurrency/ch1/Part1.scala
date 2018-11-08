@@ -5,9 +5,15 @@ import scala.annotation.tailrec
 
 object Part1 extends App{
   Exec1.go
-
+  Exec2.go
+  Exec3.go
+  Exec4.go
+  Exec5.go
+  Exec6.go
+  Exec7.go
 
   object Exec1{
+    println("\nExercise1\n----------------------------")
     def compose[A,B,C](g: B => C, f: A => B): A => C =
       (x:A)=>g(f(x))
 
@@ -16,11 +22,13 @@ object Part1 extends App{
 
     def go ={
       val a=(compose(g(3),f(4)))
+
       println(a(12))
     }
   }
 
   object Exec2{
+    println("\nExercise2\n----------------------------")
     def fuse[A, B]
     (a: Option[A], b: Option[B]): Option[(A, B)] = {
       val tup= for (x <- a; y <-b ) yield Option(x,y)
@@ -39,6 +47,7 @@ object Part1 extends App{
   }
 
   object Exec3{
+    println("\nExercise3\n----------------------------")
     def check[T](xs: Seq[T])(pred: T => Boolean): Boolean ={
       var result=true
       for (x <- xs; if result) {
@@ -56,6 +65,7 @@ object Part1 extends App{
   }
 
   object Exec4{
+    println("\nExercise4\n----------------------------")
     case class Pair[P, Q](val first: P, val second: Q){
 
       def get(f:P):Option[(P,Q)]=
@@ -81,6 +91,7 @@ object Part1 extends App{
   }
 
   object Exec5{
+    println("\nExercise5\n----------------------------")
     def permutations(x: String)(pred:String=>String): Seq[String]={
 
 
@@ -119,6 +130,7 @@ object Part1 extends App{
   }
 
   object Exec6{
+    println("\nExercise6\n----------------------------")
     def combinations(n: Int, xs: Seq[Int]): Iterator[Seq[Int]]= {
       var a: Set[Seq[Int]] = Set()
       def loop(n: Int, xs: Seq[Int]): Unit = {
@@ -143,6 +155,7 @@ object Part1 extends App{
   }
 
   object Exec7 {
+    println("\nExercise7\n----------------------------")
     def matcher(regex: String): PartialFunction[String, List[String]] = {
       val reg = regex.r
 
