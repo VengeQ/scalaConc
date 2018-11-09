@@ -2,4 +2,4 @@
 target/
 project/target/
 part[1-9]/target/
-.idea/
+.idea
