@@ -1017,3 +1017,21 @@
 2018-11-08 10:37:28,820 INFO  [Thread-20] com.dvbaluki.concurrency.ch2.ch2.package$ - Thread Thread-20 put value 14
 2018-11-08 10:37:28,820 INFO  [Thread-21] com.dvbaluki.concurrency.ch2.ch2.package$ - Thread Thread-21 get value 14.0
 2018-11-08 10:37:28,820 INFO  [Thread-20] com.dvbaluki.concurrency.ch2.ch2.package$ - Thread Thread-20 put value 15
+2018-11-09 13:09:59,712 INFO  [run-main-1] com.dvbaluki.concurrency.ch2.ch2.package$ - Start logging
+2018-11-09 13:10:43,694 INFO  [run-main-2] com.dvbaluki.concurrency.ch2.ch2.package$ - Start logging
+2018-11-09 13:11:09,137 INFO  [run-main-3] com.dvbaluki.concurrency.ch2.ch2.package$ - Start logging
+2018-11-09 13:11:51,414 INFO  [run-main-4] com.dvbaluki.concurrency.ch2.ch2.package$ - Start logging
+2018-11-09 13:12:50,827 INFO  [run-main-5] com.dvbaluki.concurrency.ch2.ch2.package$ - Start logging
+2018-11-09 13:18:18,830 INFO  [run-main-6] com.dvbaluki.concurrency.ch2.ch2.package$ - Start logging
+2018-11-09 13:26:15,885 INFO  [run-main-7] com.dvbaluki.concurrency.ch2.ch2.package$ - Start logging
+2018-11-09 13:27:55,134 INFO  [run-main-0] com.dvbaluki.concurrency.ch2.ch2.package$ - Start logging
+2018-11-09 13:30:18,679 INFO  [run-main-0] com.dvbaluki.concurrency.ch2.ch2.package$ - Start logging
+2018-11-09 13:30:31,862 INFO  [run-main-1] com.dvbaluki.concurrency.ch2.ch2.package$ - Start logging
+2018-11-09 13:31:33,502 INFO  [run-main-2] com.dvbaluki.concurrency.ch2.ch2.package$ - Start logging
+2018-11-09 13:33:14,822 INFO  [run-main-3] com.dvbaluki.concurrency.ch2.ch2.package$ - Start logging
+2018-11-09 13:33:24,770 INFO  [run-main-4] com.dvbaluki.concurrency.ch2.ch2.package$ - Start logging
+2018-11-09 13:34:57,189 INFO  [run-main-5] com.dvbaluki.concurrency.ch2.ch2.package$ - Start logging
+2018-11-09 13:40:11,674 INFO  [run-main-0] com.dvbaluki.concurrency.ch2.ch2.package$ - Start logging
+2018-11-09 13:46:12,297 INFO  [run-main-1] com.dvbaluki.concurrency.ch2.ch2.package$ - Start logging
+2018-11-09 19:12:57,751 INFO  [run-main-0] com.dvbaluki.concurrency.ch2.ch2.package$ - Start logging
+2018-11-09 19:14:22,501 INFO  [run-main-0] com.dvbaluki.concurrency.ch2.ch2.package$ - Start logging
