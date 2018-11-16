@@ -30,11 +30,24 @@ lazy val part2=Project(
   mainClass in assembly := Some("com.dvbaluki.concurrency.ch2.Part2")
 )
 
+lazy val part3=Project(
+  id = "part3",
+  base = file("part3")
+).settings(
+  version := "0.1.3",
+  scalaVersion := "2.12.7",
+  name := "part3",
+  fork := true,
+  libraryDependencies ++= Seq(scalaLogging, logbackClassic,(scalaTest % Test)),
+  mainClass in assembly := Some("com.dvbaluki.concurrency.ch3.Part3")
+)
+
+
 lazy val concurrency = (project in file("."))
   .settings(
     name := "concurrency",
     libraryDependencies ++= Seq((scalaTest % Test),commons, scalaLogging, logbackClassic)
-  ).aggregate(part1,part2).dependsOn(part1,part2)
+  ).aggregate(part1,part2).dependsOn(part1,part2,part3)
 
 resolvers ++= Seq(
   "Sonatype OSS Snapshots" at

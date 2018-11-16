@@ -2,6 +2,7 @@ package com.dvbaluki
 package concurrency.ch2
 
 import java.io.{File, FileOutputStream, PrintWriter}
+import java.lang.module.ModuleDescriptor.Requires
 
 import com.typesafe.scalalogging.Logger
 import org.slf4j._
@@ -35,8 +36,7 @@ import ch2._
 object Part2 extends App{
 
 
-  Ex9.go
-
+  Ex10.go
   //parallel calculation
   object Ex1{
     def parallel[A, B](a: =>A, b: =>B): (A, B) = {
@@ -442,7 +442,6 @@ object Part2 extends App{
     }
   }
 
-  //need fix nullPointer in dequeue and enqueue
   object Ex8 {
 
     private val syncs:Array[mutable.Queue[() => Unit]]= (for (i <- 1 to 10) yield new mutable.Queue[() => Unit]).toArray// Массив, в котором находятся очереди Queue, индекс массива - приоритет
@@ -582,6 +581,112 @@ object Part2 extends App{
         pool.asynchronous(6) {for (i <- 1 to 10000000){};log(s"World ${6}")}
         pool.asynchronous(4) {for (i <- 1 to 10000000){};log(s"Any ${4}")}
         pool.asynchronous(1) {for (i <- 1 to 10000000){};log(s"Value ${1}")}
+      }
+
+      t1.join()
+
+
+      Thread.sleep(500)
+    }
+  }
+
+  object Ex10{
+
+    class MaxThreadCounterLimitException(message:String) extends Exception(message){
+      println(message)
+    }
+
+    class PriorityTaskPool(val p:Int=4, val important:Int=3){
+      private val syncs:Array[mutable.Queue[() => Unit]]= (for (i <- 1 to 10) yield new mutable.Queue[() => Unit]).toArray// Массив, в котором находятся очереди Queue, индекс массива - приоритет
+      val workers:Array[MainWorker]= (for (i <- 1 to p) yield new MainWorker).toArray  // массив воркеров
+
+      private var isBlocked=false // Флаг блокировки внесения новых заданий
+      private var terminated=false // Флаг для корректного завершения
+
+      // Проверяем, что все очереди пустые начиная с 1
+      def isThisEmpty:Boolean={
+        @tailrec
+        def go(s:Array[mutable.Queue[() => Unit]]):Boolean=s match{
+          case x if x.length==1 => s(0).isEmpty
+          case x  => if (!(s(0).isEmpty)) false else go(x.tail)
+        }
+        go(syncs)
+      }
+
+      //Если есть непустые очереди, то вытаскиваем самые приоритетный элемент, всегда надо проверять через  isThisEmpty
+      def dequeue:() => Unit={
+        @tailrec
+        def go(s:Array[mutable.Queue[() => Unit]]):() => Unit = s match{
+          case s if s.length==1 => s(0).dequeue()
+          case s => if (s(0).isEmpty) go(s.tail) else s(0).dequeue()
+        }
+        go(syncs)
+      }
+
+      //Поместить элемент в очередь
+      def enqueue(priority:Int, sync:() => Unit)=
+       // if (!isBlocked)
+          syncs(priority).enqueue(sync)
+
+      //Потоки демоны
+      class MainWorker extends Thread{
+        setDaemon(true)
+        // функция мониторинга очередей
+        def poll() = syncs.synchronized {
+          while (isThisEmpty && !terminated) syncs.wait()
+          if (!terminated)
+            Some(dequeue)//dequeue
+          else None
+        }
+        override def run() = poll() match {
+          case Some(task) => task(); run()
+          case None =>
+        }
+      }
+
+      // запустить все потоки
+      def pullStart= for (elem <- workers) elem.start()
+      //метод асинхронного добавления в очередь
+      def asynchronous(priority: Int)(task: =>Unit): Unit={
+        require(priority<=9)
+        syncs.synchronized{
+          enqueue(priority,() => task)
+          syncs.notifyAll()
+        }
+      }
+
+      //Закончить выполнение
+      def shutdown(): Unit= syncs.synchronized{
+        isBlocked=true//Заблокировать внесение новых заданий
+        terminated=true //Флаг завершения
+        //for (i <- important to 9) syncs(i).clear()
+        syncs.notify()
+      }
+
+
+    }
+
+
+
+
+    //GO GO GO
+    def go:Unit={
+      val pool=new PriorityTaskPool()
+      pool.pullStart
+      println("!")
+      val t1=thread {
+        pool.asynchronous(2) {for (i <- 1 to 1000){};log(s"Hello ${2}")}
+        pool.asynchronous(8) {for (i <- 1 to 1000){};log(s"MaxPriority ${8}")}
+        pool.asynchronous(5) {for (i <- 1 to 100000){};log(s"Fucking ${5}")}
+        pool.asynchronous(7) {for (i <- 1 to 10000){};log(s"Stupid ${7}")}
+        pool.asynchronous(1) {for (i <- 1 to 10000){};log(s"World ${1}")}
+        pool.asynchronous(5) {for (i <- 1 to 100){};log(s"Any ${5}")}
+        pool.asynchronous(1) {for (i <- 1 to 100000){};log(s"Value ${1}")}
+        pool.asynchronous(1) {for (i <- 1 to 10000){};log(s"Stupid ${1}")}
+        pool.asynchronous(6) {for (i <- 1 to 100000){};log(s"World ${6}")}
+        pool.asynchronous(4) {for (i <- 1 to 1){};log(s"Any ${4}")}
+        pool.asynchronous(1) {for (i <- 1 to 1000000){};log(s"Value ${1}")}
+        pool.shutdown()
       }
 
       t1.join()
