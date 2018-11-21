@@ -121,7 +121,7 @@ object Part2 extends App{
     private var i=1
     private val finishValue=150
     def go={
-      val t1=thread {
+      val t1=thread{
         val name=Thread.currentThread.getName()
         while (cont ){
           try{
@@ -341,7 +341,6 @@ object Part2 extends App{
         while (!sync.isEmpty) sync.getWait()
         println(sync.isEmpty)
         if (i>=finishValue && sync.isEmpty) lines.close()
-
       }
 
       t1.join()
@@ -662,12 +661,7 @@ object Part2 extends App{
         //for (i <- important to 9) syncs(i).clear()
         syncs.notify()
       }
-
-
     }
-
-
-
 
     //GO GO GO
     def go:Unit={

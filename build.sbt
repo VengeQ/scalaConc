@@ -38,7 +38,7 @@ lazy val part3=Project(
   scalaVersion := "2.12.7",
   name := "part3",
   fork := true,
-  libraryDependencies ++= Seq(scalaLogging, logbackClassic,(scalaTest % Test)),
+  libraryDependencies ++= Seq(scalaLogging, logbackClassic,(scalaTest % Test),commons),
   mainClass in assembly := Some("com.dvbaluki.concurrency.ch3.Part3")
 )
 
