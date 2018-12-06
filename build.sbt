@@ -51,7 +51,11 @@ lazy val part4=Project(
   name := "part4",
   fork := true,
   libraryDependencies ++= Seq(scalaLogging, logbackClassic,(scalaTest % Test),commons),
+<<<<<<< HEAD
   mainClass in assembly := Some("com.dvbaluki.concurrency.ch4")
+=======
+  mainClass in assembly := Some("com.dvbaluki.concurrency.ch4.Part4")
+>>>>>>> ce2fff156baf29d55fbe7a7e8e2c02541c2eea1d
 )
 
 
