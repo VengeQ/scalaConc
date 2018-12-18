@@ -12,16 +12,19 @@ import scala.concurrent._
 import ExecutionContext.Implicits.global
 import scala.io.Source
 import java.io._
-<<<<<<< HEAD
+import java.util.{Timer, TimerTask}
 
 import org.apache.commons.io.FileUtils._
 
 import scala.collection.convert.decorateAsScala._
-import scala.util.{Failure, Success}
-=======
+import scala.util.{Failure, Success, Try}
 import org.apache.commons.io.FileUtils._
+
+import scala.{None, util}
+import scala.concurrent.duration._
 import scala.collection.convert.decorateAsScala._
->>>>>>> ce2fff156baf29d55fbe7a7e8e2c02541c2eea1d
+import scala.util.control.NonFatal
+
 
 package object ch4{
   val logger = Logger(LoggerFactory.getLogger(this.getClass))
@@ -31,63 +34,120 @@ package object ch4{
   def execute(body: =>Unit) = ExecutionContext.global.execute(
     new Runnable { def run() = body }
   )
+  private val timer = new Timer(true)
+  def timeout(t: Long): Future[Unit] = {
+    val p = Promise[Unit]
+    timer.schedule(new TimerTask {
+      def run() = {
+        p success ()
+        timer.cancel()
+      }
+    }, t)
+    p.future
+  }
+  implicit class FutureOps[T](val self: Future[T]) {
+    def or(that: Future[T]): Future[T] = {
+      val p = Promise[T]
+      self onComplete { case x => p tryComplete x }
+      that onComplete { case y => p tryComplete y }
+      p.future
+    }
+  }
+
 }
 
-<<<<<<< HEAD
 
 object Part4 extends App {
-
- val r1=Future{
-   (1 to 100) filter(_%2==0) reduceLeft(_+_)
- }
-
-  val r2=Future{
-    (1 to 100) filter(_%2==1) reduceLeft(_+_)
-  }
-
-  val answer = for{
-    x <- r1
-    y <- r2
-
-  } yield {println(x+" "+y );x+y}
+  import ch4._
 
 
-  answer.onComplete( _ match{
-    case Success(ext) => println(ext)
-    case Failure(est) => println(est)
-  })
-
-  Thread.sleep(100)
-=======
-import ch4._
-
-
-
-object Part4 extends App {
-
-  val netiquetteUrl = "http://www.ietf.org/rfc/rfc1855.txt"
-  val netiquette = Future { Source.fromURL(netiquetteUrl).mkString }
-  val urlSpecUrl = "http://www.w3.org/Addressing/URL/url-spec.txt"
-  val urlSpec = Future { Source.fromURL(urlSpecUrl).mkString }
-
-  val answer = for {
-    nettext <- netiquette
-    urltext <- urlSpec
-  } yield {
-    "First, read this: " + nettext + ". Now, try this: " + urltext
-  }
-
-
- go()
-
-  @tailrec def go():Unit={
-    Thread.sleep(100)
-    answer.isCompleted match {
-      case true => println(answer)
-      case false => go()
+  object Ex1{
+    @tailrec
+    def readAndValidateUrl:String={
+      println("""type url in format "http://www.example.com".""")
+      val read:String=scala.io.StdIn.readLine()
+      val pattern="""^http(s*)://(www\.)?\w+.\w+""".r
+      pattern findFirstIn read match{
+        case Some(x)=>read
+        case None =>readAndValidateUrl
+      }
     }
 
-  }
->>>>>>> ce2fff156baf29d55fbe7a7e8e2c02541c2eea1d
-}
+    def getFromUrl(string: String):Future[String]={
+      val p=Promise[String]
+      global.execute(() => try {
+        p success (Source.fromURL(string)("UTF-8").mkString)
+      } catch {
+        case ex: Exception => println(ex)
+      })
+      p.future
+    }
 
+
+    @tailrec
+    def checkCompleteUrl[T](future:Future[T]):Unit={
+      if (future.isCompleted) {
+       println(s"\n${future.value.get.get}")
+      }
+      else {
+        print(".")
+        Thread.sleep(50)
+        checkCompleteUrl(future)
+      }
+    }
+
+    def go={
+      val urlString=readAndValidateUrl
+      val htmlFromUrl=getFromUrl(urlString) or timeout(5000).map(_=>("timeout!"))
+      checkCompleteUrl(htmlFromUrl)
+    }
+  }
+
+  object Ex2{
+    class IVar[T]() {
+      private val p = Promise[T]
+      def apply(): T = {
+        if (p.isCompleted) p.future.value.get.get
+        else throw new Exception("not initialize IVar")
+      }
+
+      def :=(x: T): Unit = {
+        if (p.future.isCompleted) throw new Exception("Ivar already init")
+        else {
+          p.success(x)
+          p.future
+
+        }
+        Unit
+      }
+    }
+
+    def go={
+      val a=new IVar[Int]
+      a:=23
+      println(a())
+
+    }
+  }
+
+  object Ex3{
+    implicit class FutureExists[T](val self:Future[T]){
+      def exists(p: T => Boolean): Future[Boolean]={
+        self map( p(_) )
+      }
+    }
+
+    def go={
+      val a:Future[String]=Future("124")
+      val b =a.exists(_.contains("12"))
+      val c=a.exists(_.contains("23"))
+      while (!b.isCompleted || !a.isCompleted){Thread.sleep(30)}
+      println(b.value.get.get)
+      println(c.value.get.get)
+    }
+  }
+
+  Ex1.go
+
+
+}
