@@ -8,7 +8,7 @@
     </appender>
 
     <appender name="FILE" class="ch.qos.logback.core.FileAppender">
-        <file>loggerFile.log</file>
+        <file>../loggerFile.log</file>
         <encoder>
             <pattern>
                 %date %-5level [%thread] %logger{128} - %msg%n

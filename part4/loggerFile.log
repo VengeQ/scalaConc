@@ -1,3 +1,0 @@
-2018-11-24 14:38:45,621 WARN  [main] com.dvbaluki.concurrency.ch4.ch4.package$ - !
-2018-11-24 14:39:24,218 INFO  [scala-execution-context-global-13] com.dvbaluki.concurrency.ch4.ch4.package$ - longest line:   libraryDependencies ++= Seq(scalaLogging, logbackClassic,(scalaTest % Test),commons),
-2018-11-24 14:39:33,621 INFO  [scala-execution-context-global-13] com.dvbaluki.concurrency.ch4.ch4.package$ - longest line:   libraryDependencies ++= Seq(scalaLogging, logbackClassic,(scalaTest % Test),commons),

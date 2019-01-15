@@ -11,19 +11,12 @@ import scala.annotation.tailrec
 import scala.concurrent._
 import ExecutionContext.Implicits.global
 import scala.io.Source
+import scala.async._
 import java.io._
 import java.util.{Timer, TimerTask}
 
-import org.apache.commons.io.FileUtils._
-
-import scala.collection.convert.decorateAsScala._
-import scala.util.{Failure, Success, Try}
-import org.apache.commons.io.FileUtils._
-
-import scala.{None, util}
-import scala.concurrent.duration._
-import scala.collection.convert.decorateAsScala._
-import scala.util.control.NonFatal
+import scala.util.{Failure, Random, Success, Try}
+import sys.process._
 
 
 package object ch4{
@@ -133,12 +126,12 @@ object Part4 extends App {
   object Ex3{
     implicit class FutureExists[T](val self:Future[T]){
       def exists(p: T => Boolean): Future[Boolean]={
-        self map( p(_) )
+        self map( p(_) ) recover {case ex:Exception =>false}
       }
     }
 
     def go={
-      val a:Future[String]=Future("124")
+      val a:Future[String]=Future(3/0 toString)
       val b =a.exists(_.contains("12"))
       val c=a.exists(_.contains("23"))
       while (!b.isCompleted || !a.isCompleted){Thread.sleep(30)}
@@ -147,7 +140,152 @@ object Part4 extends App {
     }
   }
 
-  Ex1.go
+  object Ex4{
+    implicit class FutureExists[T](val self:Future[T]){
+      def exists(p: T => Boolean): Future[Boolean]={
+        val promise=Promise[Boolean]
+        global.execute(() => try {
+            self.onComplete{
+              case Success(x) => promise success(p(x))
+              case Failure(_) => promise success(false)
+            }
+        }catch {
+          case ex:Exception =>println(s"${ex.getMessage}")
+        })
+        promise.future
+      }
+    }
 
+    def go={
+      val a:Future[String]=Future("123")
+      val b =a.exists(_.contains("12"))
+      val c=a.exists(_.contains("231"))
+      while (!b.isCompleted || !a.isCompleted){Thread.sleep(30)}
+      println(b.value.get.get)
+      println(c.value.get.get)
+    }
+  }
+
+  object Ex5{
+    implicit class FutureExists[T](val self:Future[T]){
+      def exists(p: T => Boolean): Future[Boolean]=Async.async{
+        Async.await(self)
+        self.value.get match {
+          case Success(a) => p(a)
+          case Failure(e) => false
+        }
+      }
+    }
+    def go={
+      val a:Future[String]=Future(0/1 toString)
+      val b =a.exists(_.contains("12"))
+      val c=a.exists(_.contains("231"))
+      while (!b.isCompleted || !a.isCompleted){Thread.sleep(30)}
+      println(b.value.get.get)
+      println(c.value.get.get)
+    }
+  }
+
+  object Ex6{
+
+    def spawn(command: String): Future[Int]={
+      val p=Promise[Int]
+      global.execute(new Runnable {
+        override def run=try{
+          p success (command!)
+        }catch {
+          case ex:Exception=>println(ex)
+        }
+      })
+      p.future
+    }
+
+
+    def go = {
+      for ( i <- 0 to 10){
+        spawn( "cmd /c dir |findstr \""+i+"\"") onComplete{
+          case Success(x) => println(x)
+          case Failure(e) => println(e.getMessage)
+        }
+      }
+    Thread.sleep(1000)
+    }
+  }
+
+  object Ex7{
+    class IMap[K, V] {
+      private val inner=scala.collection.concurrent.TrieMap[K,V]()
+      def update(k: K, v: V): Unit= {
+        //двойная проверка с блокировкой при вставке, можно через атомик референц еще попробовать
+        inner.get(k) match {
+          case Some(_) => throw new Exception("Key already init exception")
+          case None => inner.synchronized{ inner.get(k) match{
+            case Some(_) => throw new Exception("Key already init exception")
+            case None => inner.+=((k,v))
+           }
+          }
+        }
+      }
+      def apply(k: K): Future[V]= {
+        val promise=Promise[V]
+        @tailrec def tryAgainGetValue:Any= {
+          inner.get(k) match {
+            case Some(x) => promise.success(x)
+            case None => tryAgainGetValue
+          }
+        }
+        global.execute(() => {tryAgainGetValue})
+        promise.future
+      }
+
+      def show=inner.foreach(println)
+    }
+
+    def go={
+      val a=new IMap[Int,String]
+
+      for (i <-1 to 5){
+        global.execute { () =>
+          for (j<- 1 to 5) {
+            try {
+              a.update(i, Random.nextInt(10000) toString)
+            } catch {
+              case ex: Exception => 1
+            }
+          }
+        }
+      }
+      Thread.sleep(500)
+      a.show
+      for (i <-1 to 5) a(i).onComplete(println)
+    }
+  }
+
+  object Ex8{
+    implicit class PromiseCompose[T](val self:Promise[T]){
+      def compose[S](f: S => T): Promise[S] = {
+        val promise=Promise[S]
+        global.execute(() => {
+          val future=promise.future
+          future onComplete {
+            case x if !self.isCompleted => self.complete(x map(f(_)))
+            case x if self.isCompleted => 1
+          }
+        })
+        promise
+      }
+    }
+    def go= {
+      val a = Promise[Int]
+      val b = Promise[String]
+      val c = a.compose((x: Int) => x * 2)
+      val d = b.compose((x: String) => x * 2)
+      d success ("hello")
+      Thread.sleep(100)
+      println(b)
+    }
+  }
+
+  Ex8.go
 
 }
